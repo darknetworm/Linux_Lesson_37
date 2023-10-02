@@ -1,0 +1,26 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/centos8"
+  config.vm.provider :virtualbox do |v|
+    v.memory = 2048
+    v.cpus = 1
+  end
+  boxes = [
+    { :name => "ipa.otus.lan", :ip => "192.168.57.10", },
+    { :name => "client1.otus.lan", :ip => "192.168.57.11", },
+    { :name => "client2.otus.lan", :ip => "192.168.57.12", }
+          ]
+  boxes.each do |opts|
+    config.vm.define opts[:name] do |config|
+      config.vm.hostname = opts[:name]
+      config.vm.network "private_network", ip: opts[:ip]
+      if opts[:name] == "client2.otus.lan"
+        config.vm.provision "ansible" do |ansible|
+          ansible.playbook = "provision.yml"
+          ansible.inventory_path = "hosts"
+          ansible.host_key_checking = "false"
+          ansible.limit = "all"
+        end
+      end
+    end
+  end
+end
