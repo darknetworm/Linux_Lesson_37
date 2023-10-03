@@ -1,0 +1,86 @@
+﻿[root@ipa vagrant]# sudo ipa user-find --all
+---------------
+3 users matched
+---------------
+  dn: uid=admin,cn=users,cn=accounts,dc=otus,dc=lan
+  User login: admin
+  Last name: Administrator
+  Full name: Administrator
+  Home directory: /home/admin
+  GECOS: Administrator
+  Login shell: /bin/bash
+  Principal alias: admin@OTUS.LAN, root@OTUS.LAN
+  User password expiration: 20231231105223Z
+  UID: 1969600000
+  GID: 1969600000
+  Account disabled: False
+  Preserved user: False
+  Member of groups: admins, trust admins
+  ipantsecurityidentifier: S-1-5-21-3701818231-3657623923-3881246636-500
+  ipauniqueid: 39b5f6f8-6111-11ee-8f60-080027eac5bc
+  krbextradata: AALnoBplcm9vdC9hZG1pbkBPVFVTLkxBTgA=
+  krblastadminunlock: 20231002105223Z
+  krblastpwdchange: 20231002105223Z
+  objectclass: top, person, posixaccount, krbprincipalaux, krbticketpolicyaux, inetuser, ipaobject, ipasshuser, ipaSshGroupOfPubKeys, ipaNTUserAttrs
+
+  dn: uid=user1_otus,cn=users,cn=accounts,dc=otus,dc=lan
+  User login: user1_otus
+  First name: User1
+  Last name: Otus
+  Full name: User1 Otus
+  Display name: User1 Otus
+  Initials: UO
+  Home directory: /home/user1_otus
+  GECOS: User1 Otus
+  Login shell: /bin/bash
+  Principal name: user1_otus@OTUS.LAN
+  Principal alias: user1_otus@OTUS.LAN
+  User password expiration: 20231231110222Z
+  Email address: user1_otus@otus.lan
+  UID: 1969600003
+  GID: 1969600003
+  Account disabled: False
+  Preserved user: False
+  Member of groups: ipausers
+  ipantsecurityidentifier: S-1-5-21-3701818231-3657623923-3881246636-1003
+  ipauniqueid: d932e0d8-6111-11ee-b785-080027eac5bc
+  krbextradata: AAI+oxpla2FkbWluZEBPVFVTLkxBTgA=
+  krblastpwdchange: 20231002110222Z
+  krbloginfailedcount: 0
+  krbticketflags: 128
+  mepmanagedentry: cn=user1_otus,cn=groups,cn=accounts,dc=otus,dc=lan
+  objectclass: top, person, organizationalperson, inetorgperson, inetuser, posixaccount, krbprincipalaux, krbticketpolicyaux, ipaobject, ipasshuser,
+               ipaSshGroupOfPubKeys, mepOriginEntry, ipantuserattrs
+
+  dn: uid=user2_otus,cn=users,cn=accounts,dc=otus,dc=lan
+  User login: user2_otus
+  First name: User2
+  Last name: Otus
+  Full name: User2 Otus
+  Display name: User2 Otus
+  Initials: UO
+  Home directory: /home/user2_otus
+  GECOS: User2 Otus
+  Login shell: /bin/sh
+  Principal name: user2_otus@OTUS.LAN
+  Principal alias: user2_otus@OTUS.LAN
+  User password expiration: 20231231110251Z
+  Email address: user2_otus@otus.lan
+  UID: 1969600004
+  GID: 1969600004
+  Account disabled: False
+  Preserved user: False
+  Member of groups: ipausers
+  ipantsecurityidentifier: S-1-5-21-3701818231-3657623923-3881246636-1004
+  ipauniqueid: d9c359d8-6111-11ee-9248-080027eac5bc
+  krbextradata: AAJboxpla2FkbWluZEBPVFVTLkxBTgA=
+  krblastpwdchange: 20231002110251Z
+  krbloginfailedcount: 0
+  krbticketflags: 128
+  mepmanagedentry: cn=user2_otus,cn=groups,cn=accounts,dc=otus,dc=lan
+  objectclass: top, person, organizationalperson, inetorgperson, inetuser, posixaccount, krbprincipalaux, krbticketpolicyaux, ipaobject, ipasshuser,
+               ipaSshGroupOfPubKeys, mepOriginEntry, ipantuserattrs
+----------------------------
+Number of entries returned 3
+----------------------------
+[root@ipa vagrant]# 
