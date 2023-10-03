@@ -83,4 +83,3 @@
 ----------------------------
 Number of entries returned 3
 ----------------------------
-[root@ipa vagrant]# 
